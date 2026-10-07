@@ -14,11 +14,15 @@ def test_inventory():
        # Abrir la pantalla de login
         driver.get("https://www.saucedemo.com")
     
-        # Completar usuario y contraseña
-        usuario = driver.find_element(By.ID, "user-name").send_keys("standard_user")
-        contraseña = driver.find_element(By.ID, "password").send_keys("secret_sauce")
-        #  Enviar formulario
-        boton = driver.find_element(By.CSS_SELECTOR, 'input[id="login-button"]').click() # type="submit"
+        # Ingresamos credenciales válidas y hacemos clic en el botón de login
+        usuario = driver.find_element(By.ID, "user-name")
+        contraseña = driver.find_element(By.ID, "password")
+        boton = driver.find_element(By.CSS_SELECTOR, 'input[id="login-button"]')
+        #completamos los campos de usuario y contraseña y hacemos clic en el botón de login        
+        usuario.send_keys("standard_user")
+        contraseña.send_keys("secret_sauce")
+        boton.click()
+        
         # Verificar URL = a /inventory.html
         assert "/inventory.html" in driver.current_url, "No se pudo redirigir al inventario."
     
