@@ -1,0 +1,32 @@
+2026-11-23 18:58:10,429 INFO talento_tech - Inicializando la prueba de carrito
+2026-11-23 18:58:10,429 INFO talento_tech - Ingresando a la pagina web de prueba
+2026-11-23 18:58:11,117 INFO talento_tech - Iniciando sesion con credenciales validas
+2026-11-23 18:58:11,290 INFO talento_tech - Sesion iniciada correctamente
+2026-11-23 18:58:11,290 INFO talento_tech - Ingresando a la pagina de inventario
+2026-11-23 18:58:11,290 INFO talento_tech - Leyendo el primer producto del JSON
+2026-11-23 18:58:11,291 INFO talento_tech - Agregando producto del JSON al carrito
+2026-11-23 18:58:11,410 INFO talento_tech - Prueba de contador de carrito validad
+2026-11-23 18:58:11,411 INFO talento_tech - Ir a la pagina del carrito
+2026-11-23 18:58:11,473 INFO talento_tech - Prueba del nombre del producto en carrito contra JSON validada
+2026-11-23 18:58:11,487 INFO talento_tech - Prueba del precio del producto en carrito contra JSON validada
+2026-11-23 18:58:14,601 INFO talento_tech - Inicializando la prueba de Inventario
+2026-11-23 18:58:14,602 INFO talento_tech - Ingresando a la pagina web
+2026-11-23 18:58:14,895 INFO talento_tech - Ingresando credenciales para iniciar sesion
+2026-11-23 18:58:15,071 INFO talento_tech - Sesion iniciada correctamente
+2026-11-23 18:58:15,135 INFO talento_tech - Productos de la pagina web capturados
+2026-11-23 18:58:15,135 INFO talento_tech - Prueba de cantidad de productos validada
+2026-11-23 18:58:15,170 INFO talento_tech - Prueba de integradad de la informacion de los productos validada
+2026-11-23 18:58:15,182 INFO talento_tech - Prueba de visibilidad del menu en la pagina validada
+2026-11-23 18:58:15,192 INFO talento_tech - Prueba de visibilidad del filtro en la pagina validada
+2026-11-23 18:58:18,281 INFO talento_tech - Iniciando prueba de login
+2026-11-23 18:58:18,561 INFO talento_tech - Pagina Abierta.
+2026-11-23 18:58:18,735 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 18:58:18,773 INFO talento_tech - Login exitoso
+2026-11-23 18:58:21,869 INFO talento_tech - Iniciando prueba de login
+2026-11-23 18:58:22,134 INFO talento_tech - Pagina Abierta.
+2026-11-23 18:58:22,294 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 18:58:22,317 INFO talento_tech - Prueba de mensaje de error valida
+2026-11-23 18:58:25,422 INFO talento_tech - Iniciando prueba de login
+2026-11-23 18:58:25,711 INFO talento_tech - Pagina Abierta.
+2026-11-23 18:58:25,860 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 18:58:25,882 INFO talento_tech - Prueba de mensaje de error valida

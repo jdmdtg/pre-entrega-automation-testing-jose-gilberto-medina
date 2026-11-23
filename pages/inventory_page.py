@@ -21,6 +21,11 @@ class InventoryPage:
     
             return producto[0].find_element(By.CLASS_NAME,"inventory_item_price").text
 
+    # def obtener_nombre_primer_producto(self):
+    #     producto = self.obtener_productos()
+
+    #     return producto[0].find_element(By.CLASS_NAME,"inventory_item_desc").text
+    
     def menu_visible(self):
        menu = self.driver.find_element(By.ID,"react-burger-menu-btn")
 

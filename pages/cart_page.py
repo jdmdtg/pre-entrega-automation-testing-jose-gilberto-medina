@@ -15,3 +15,5 @@ class CartPage:
         precio = self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME,"inventory_item_price"))).text
         return float(precio.replace("$",""))
     
+    def obtener_descripcion_producto(self):
+            return self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME,"inventory_item_desc"))).text

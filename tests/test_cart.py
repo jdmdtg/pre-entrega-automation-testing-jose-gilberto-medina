@@ -1,61 +1,49 @@
-import time
-import pytest
-
-# carrito.py
-# Añade el primer producto al carrito y verificar item en carrito.
-
-
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 
-def test_add_to_cart():
-    
-    driver = webdriver.Chrome()
-    driver.implicitly_wait(5)
+from pages.login_page import LoginPage
+from pages.inventory_page import InventoryPage
+from pages.cart_page import CartPage
 
- # Crear el driver (Chrome por defecto)
-    driver = webdriver.Chrome()
-  
+from utils.reader import read_productos_json
+from utils.logger import logger
+
+def test_cart(driver):
     try:
-        # Abrir la página de login
-        driver.get("https://www.saucedemo.com")
+        logger.info("Inicializando la prueba de carrito")
+        login_page = LoginPage(driver)
+        inventory_page = InventoryPage(driver)
+        cart_page = CartPage(driver)
 
-        # Completar identificar usuario, contraseña y completar el formulario de login
-        usuario = driver.find_element(By.ID, "user-name")
-        contraseña = driver.find_element(By.ID, "password")
-        boton = driver.find_element(By.CSS_SELECTOR, 'input[id="login-button"]')
+        logger.info("Ingresando a la pagina web de prueba")
+        driver.get("https://www.saucedemo.com/")
 
-        usuario.send_keys("standard_user")
-        contraseña.send_keys("secret_sauce")
-        boton.click()
+        logger.info("Iniciando sesion con credenciales validas")
+        login_page.login("standard_user","secret_sauce")
+        logger.info("Sesion iniciada correctamente")
         
-   
-     
-        #Agregar Producto al carrito.
-        first_item = driver.find_element(By.CSS_SELECTOR, ".inventory_item")
-        first_item_name = first_item.find_element(By.CSS_SELECTOR, ".inventory_item_name").text
-        first_item_price = first_item.find_element(By.CSS_SELECTOR, ".inventory_item_price").text
-        first_item_button = first_item.find_element(By.TAG_NAME, "button")
-        first_item_button.click()
+        logger.info("Ingresando a la pagina de inventario")
         
-        # Espera explícita para todos los find_element
-        time.sleep(2)
+        logger.info("Leyendo el primer producto del JSON")
+        producto = read_productos_json()[0]
+        print(producto)
         
-        # Verificar badge del carrito = 1
-        badge = driver.find_element(By.CLASS_NAME, "shopping_cart_badge").text
-        assert badge == "1", f"El contador del carrito es {badge} (se esperaba 1)"
-         
-        # Ir al carrito y confirmar producto
-        boton_agregar = driver.find_element(By.CLASS_NAME, "shopping_cart_link")
-        boton_agregar.click()
-        #print(f"Producto agregado al carrito: {badge}")
+        logger.info("Agregando producto del JSON al carrito")
+        inventory_page.agregar_producto(producto["nombre"])
+        
+        assert inventory_page.obtener_contador_carrito() == "1"
+        logger.info("Prueba de contador de carrito validad")
+        
+        logger.info("Ir a la pagina del carrito")
+        inventory_page.ir_al_carrito()
+        
+        assert cart_page.obtener_nombre_producto() == producto["nombre"]
+        logger.info("Prueba del nombre del producto en carrito contra JSON validada")
+        
+        assert cart_page.obtener_precio_producto() == producto["precio"]
+        logger.info("Prueba del precio del producto en carrito contra JSON validada")
+        
+        # assert cart_page.obtener_descripcion_producto() == producto["descripcion"]
+        # logger.info("Prueba de la descripcion del producto en carrito contra JSON validada")
                 
-        #verificamos que el producto agregado al carrito es el mismo que el primer producto de la lista
-        cart_name = driver.find_element(By.CSS_SELECTOR, ".inventory_item_name").text
-        assert cart_name == first_item_name, "El producto del carrito no coincide"
-        #print(f"Producto en carrito: {cart_name}")
-        
-        print("Evaluación Finalizada: Login Exitoso, validación de URL, Producto Agregado y Verificado la existencia en el carrito correctamente.")
-        
-    finally:
-        driver.quit()
+    except Exception:
+        logger.exception("Error durante la prueba de carrito")

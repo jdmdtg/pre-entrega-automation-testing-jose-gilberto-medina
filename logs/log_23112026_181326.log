@@ -1,0 +1,130 @@
+2026-11-23 18:13:27,712 WARNING selenium.webdriver.common.selenium_manager - There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+2026-11-23 18:13:27,712 WARNING selenium.webdriver.common.selenium_manager - Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+2026-11-23 18:13:30,018 INFO talento_tech - Iniciando prueba de login
+2026-11-23 18:14:06,712 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_login.py", line 14, in test_login
+    driver.get("https://www.saucedemo.com/")
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 526, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 506, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=157.0.8103.79)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff73538d655]
+	(No symbol) [0x7ff735284790]
+	(No symbol) [0x7ff7350f2fb3]
+	(No symbol) [0x7ff735900d61]
+	(No symbol) [0x7ff7350e8f17]
+	(No symbol) [0x7ff73568966a]
+	(No symbol) [0x7ff735688a46]
+	(No symbol) [0x7ff735688b0a]
+	(No symbol) [0x7ff7350e65fd]
+	(No symbol) [0x7ff7350e7522]
+	(No symbol) [0x7ff7350f4130]
+	(No symbol) [0x7ff735127b14]
+	(No symbol) [0x7ff73511e11a]
+	(No symbol) [0x7ff735126bf1]
+	(No symbol) [0x7ff73510c109]
+	(No symbol) [0x7ff73510d433]
+	(No symbol) [0x7ff735827041]
+	(No symbol) [0x7ff735845c76]
+	(No symbol) [0x7ff73583c340]
+	(No symbol) [0x7ff7354bc9be]
+	(No symbol) [0x7ff735292fa5]
+	(No symbol) [0x7ff73528e2d4]
+	(No symbol) [0x7ff73528e464]
+	(No symbol) [0x7ff73527731c]
+	(No symbol) [0x7ffe59447374]
+	(No symbol) [0x7ffe5a1dcc91]
+
+2026-11-23 18:14:20,234 WARNING selenium.webdriver.common.selenium_manager - There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+2026-11-23 18:14:21,268 INFO talento_tech - Iniciando prueba de login
+2026-11-23 18:15:04,002 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_login.py", line 14, in test_login
+    driver.get("https://www.saucedemo.com/")
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 526, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 506, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=157.0.8103.79)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff73538d655]
+	(No symbol) [0x7ff735284790]
+	(No symbol) [0x7ff7350f2fb3]
+	(No symbol) [0x7ff735900d61]
+	(No symbol) [0x7ff7350e8f17]
+	(No symbol) [0x7ff73568966a]
+	(No symbol) [0x7ff735688a46]
+	(No symbol) [0x7ff735688b0a]
+	(No symbol) [0x7ff7350e65fd]
+	(No symbol) [0x7ff7350e7522]
+	(No symbol) [0x7ff7350f4130]
+	(No symbol) [0x7ff735127b14]
+	(No symbol) [0x7ff73511e11a]
+	(No symbol) [0x7ff735126bf1]
+	(No symbol) [0x7ff73510c109]
+	(No symbol) [0x7ff73510d433]
+	(No symbol) [0x7ff735827041]
+	(No symbol) [0x7ff735845c76]
+	(No symbol) [0x7ff73583c340]
+	(No symbol) [0x7ff7354bc9be]
+	(No symbol) [0x7ff735292fa5]
+	(No symbol) [0x7ff73528e2d4]
+	(No symbol) [0x7ff73528e464]
+	(No symbol) [0x7ff73527731c]
+	(No symbol) [0x7ffe59447374]
+	(No symbol) [0x7ffe5a1dcc91]
+
+2026-11-23 18:15:17,377 WARNING selenium.webdriver.common.selenium_manager - There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+2026-11-23 18:15:18,909 INFO talento_tech - Iniciando prueba de login
+2026-11-23 18:16:07,601 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_login.py", line 14, in test_login
+    driver.get("https://www.saucedemo.com/")
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 526, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 506, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=157.0.8103.79)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff73538d655]
+	(No symbol) [0x7ff735284790]
+	(No symbol) [0x7ff7350f2fb3]
+	(No symbol) [0x7ff735900d61]
+	(No symbol) [0x7ff7350e8f17]
+	(No symbol) [0x7ff73568966a]
+	(No symbol) [0x7ff735688a46]
+	(No symbol) [0x7ff735688b0a]
+	(No symbol) [0x7ff7350e65fd]
+	(No symbol) [0x7ff7350e7522]
+	(No symbol) [0x7ff7350f4130]
+	(No symbol) [0x7ff735127b14]
+	(No symbol) [0x7ff73511e11a]
+	(No symbol) [0x7ff735126bf1]
+	(No symbol) [0x7ff73510c109]
+	(No symbol) [0x7ff73510d433]
+	(No symbol) [0x7ff735827041]
+	(No symbol) [0x7ff735845c76]
+	(No symbol) [0x7ff73583c340]
+	(No symbol) [0x7ff7354bc9be]
+	(No symbol) [0x7ff735292fa5]
+	(No symbol) [0x7ff73528e2d4]
+	(No symbol) [0x7ff73528e464]
+	(No symbol) [0x7ff73527731c]
+	(No symbol) [0x7ffe59447374]
+	(No symbol) [0x7ffe5a1dcc91]
+

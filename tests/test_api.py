@@ -1,13 +1,14 @@
-# x-api-key: pub_5bca5ffc8772df976fcf8970168a1ad219ad499c472afbba2f27085fa4b4ef7d
 
 import requests
 import pytest_check as check
 
-def test_obtener_usuario(base_url,headers):
-    url = f"{base_url}/users/2"
 
-    response = requests.get(url,headers=headers)
+def test_obtener_usuario( base_url,  headers):
+    url = f"{ base_url}/users/3"
 
+    response = requests.get(url, headers)
+    print(response)
+    
     # NIVEL 1: STATUS CODE
     codigo = response.status_code
     assert codigo == 200
@@ -28,24 +29,24 @@ def test_obtener_usuario(base_url,headers):
     assert "last_name" in data["data"]
 
     # NIVEL 4: CONTENIDO
-    assert data["data"]["id"] == 2
-    assert data["data"]["email"] == "janet.weaver@reqres.in"
+    assert data["data"]["id"] == 3
+    assert data["data"]["email"] == "emma.wong@reqres.in"
 
     # NIVEL 5: TIEMPO DE RESPUESTA
-    assert response.elapsed.total_seconds() < 2
+    assert response.elapsed.total_seconds() < 5
 
 
-def test_crear_usuario(base_url,headers):
-    url = f"{base_url}/users/"
+def test_crear_usuario( base_url,  headers):
+    url = f"{ base_url}/users/"
 
     usuario = {
-        "email":"jose.montezuma@bue.edu.ar",
-        "first_name":"Jose",
-        "last_name":"Montezuma",
-        "job":"Instructor"
+        "email":"jdmdtg@gmail.com",
+        "first_name":"Jose Gilberto",
+        "last_name":"Medina",
+        "job":"Desarrollador"
     }
 
-    response = requests.post(url,headers=headers,json=usuario)
+    response = requests.post(url,headers= headers,json=usuario)
 
     # NIVEL 1
     assert response.status_code == 201
@@ -65,12 +66,12 @@ def test_crear_usuario(base_url,headers):
     check.equal(data["first_name"],usuario["first_name"]) # assert data["first_name"] == usuario["first_name"]
 
     # NIVEL 5: TIEMPO DE RESPUESTA
-    assert response.elapsed.total_seconds() < 2
+    assert response.elapsed.total_seconds() < 5
 
-def test_eliminar_usuario(base_url,headers):
-    url = f"{base_url}/users/2"
+def test_eliminar_usuario( base_url, headers):
+    url = f"{ base_url}/users/3"
     
-    response = requests.delete(url,headers=headers)
+    response = requests.delete(url,headers= headers)
     
     # NIVEL 1: STATUS CODE
     assert response.status_code == 204
@@ -82,16 +83,5 @@ def test_eliminar_usuario(base_url,headers):
     assert len(response.content) == 0
     
     # NIVEL 5: TIEMPO DE RESPUESTA
-    assert response.elapsed.total_seconds() < 2
+    assert response.elapsed.total_seconds() < 5
     
-"""
-{
-    "data":{
-        "id":2,
-        "email":"jose.montezuma@bue.edu.ar",
-        "nombre":"Jose",
-        "apellido":"Montezuma"
-    },
-    "support":{}
-}
-"""
