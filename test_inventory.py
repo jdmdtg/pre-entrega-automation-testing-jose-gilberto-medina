@@ -1,4 +1,5 @@
 import pytest
+import time
 # test_inventory.py
 # QA el login en Sauce Demo y valida la URL y el título.
 # https://github.com/jdmdtg/pre-entrega-automation-testing-jose-gilberto-medina.git|1a el título 'Products' y muestra el primer producto (nombre y precio).
@@ -31,7 +32,8 @@ def test_inventory():
             
         # — Verificar que existe la etiqueta producto —
         assert driver.find_element(By.CLASS_NAME, "title").text == "Products", "Etiqueta Producto No Encontrada"
-              
+            
+        # time.sleep(2)
 
         # Verificar que exista al menos un producto
         products = driver.find_elements(By.CSS_SELECTOR, ".inventory_item")

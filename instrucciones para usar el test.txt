@@ -1,0 +1,8 @@
+Documents/Proyectos/Python/pre-entrega-qa-a-tests
+
+$ pip show selenium
+Fatal error in launcher: Unable to create process using '"C:\Users\JMEDINA\AppData\Local\Programs\Python\Python312\python.exe"  "C:\Users\JMEDINA\AppData\Local\Programs\Python\Python312\Scripts\pip.exe" show selenium': El sistema no puede encontrar el archivo especificado.
+
+add-to-cart-sauce-labs-bolt-t-shirt
+
+pythest nombre file.py
