@@ -31,15 +31,14 @@ pre-entrega-qa-a-tests
 
 
 ├──   data
-      	├── login.csv
-	├── products.json
+		├── login.csv
+		├── products.json
 
 ├──  features		
 	├──environment.py
 	├──login.features
 	├── steps
 		├──login_steps.py
-
 
 ├──	logs
 	├── *.log
