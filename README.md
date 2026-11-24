@@ -29,13 +29,49 @@ El objetivo es automatizar los siguientes flujos en la Página SauceDemo:
 
 pre-entrega-qa-a-tests
 
-      ├── test_login.py
-      ├── test_inventory.py
-      ├── test_cart.py
-      ├── reports
-            ├── reporte_cart.html
-            ├── reporte_inventory.html
-            ├── reporte_login.html
+
+├──   data
+      	├── login.csv
+	├── products.json
+
+├──  features		
+	├──environment.py
+	├──login.features
+	├── steps
+		├──login_steps.py
+
+
+├──	logs
+	├── *.log
+
+├──  pages
+	├── cart_page.py
+	├── inventory_page.py
+	├── login_page.py
+
+├──  reports
+	├──reporte.html
+	├──reporte_cart.html
+	├──reporte_inventory.html
+	├──reporte_login.html
+	├──ui_api_reporte.html
+	├── screenshots
+		├── test_inventory.png
+		├── test_login[data1].png
+
+├── tests
+	├── test_pai.py
+	├── test_cart.py
+	├── test_inventory.py
+	├── test_login.py
+
+├── utils
+	├── logger.py
+	├── reader.py
+├── venv
+├── README.md
+├──conftest.py
+├──pitest.ini
       
 ## ⚙️ Instalación de Dependencias
 
