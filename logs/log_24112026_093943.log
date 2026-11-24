@@ -1,0 +1,88 @@
+2026-11-24 09:39:45,863 ERROR talento_tech - Error durante la prueba de Inventario.
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_api.py", line 55, in test_crear_usuario
+    assert response.status_code == 201
+AssertionError: assert 403 == 201
+ +  where 403 = <Response [403]>.status_code
+2026-11-24 09:39:46,568 ERROR talento_tech - Error durante la prueba de Inventario.
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_api.py", line 84, in test_eliminar_usuario
+    assert response.status_code == 204
+AssertionError: assert 403 == 204
+ +  where 403 = <Response [403]>.status_code
+2026-11-24 09:39:48,170 INFO talento_tech - Inicializando la prueba de carrito
+2026-11-24 09:39:48,170 INFO talento_tech - Ingresando a la pagina web de prueba
+2026-11-24 09:39:48,904 INFO talento_tech - Iniciando sesion con credenciales validas
+2026-11-24 09:39:49,151 INFO talento_tech - Sesion iniciada correctamente
+2026-11-24 09:39:49,151 INFO talento_tech - Ingresando a la pagina de inventario
+2026-11-24 09:39:49,151 INFO talento_tech - Leyendo el primer producto del JSON
+2026-11-24 09:39:49,152 INFO talento_tech - Agregando producto del JSON al carrito
+2026-11-24 09:39:49,277 INFO talento_tech - Prueba de contador de carrito validad
+2026-11-24 09:39:49,277 INFO talento_tech - Ir a la pagina del carrito
+2026-11-24 09:39:49,342 ERROR talento_tech - Error durante la prueba de carrito
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_cart.py", line 39, in test_cart
+    assert cart_page.obtener_nombre_producto() == producto["nombre"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\pages\cart_page.py", line 12, in obtener_nombre_producto
+    return self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME,"inventory_item_name"))).text
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 103, in text
+    return self._execute(Command.GET_ELEMENT_TEXT)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 504, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 506, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=158.0.8127.88); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff65e860f05]
+	(No symbol) [0x7ff65e761db0]
+	(No symbol) [0x7ff65e5e3433]
+	(No symbol) [0x7ff65e5e6cbe]
+	(No symbol) [0x7ff65edf5b0d]
+	(No symbol) [0x7ff65edf5c7f]
+	(No symbol) [0x7ff65ee219fc]
+	(No symbol) [0x7ff65ee3902a]
+	(No symbol) [0x7ff65ee1c289]
+	(No symbol) [0x7ff65ee1c220]
+	(No symbol) [0x7ff65e615b01]
+	(No symbol) [0x7ff65e5fbea1]
+	(No symbol) [0x7ff65e5fd1d3]
+	(No symbol) [0x7ff65ed00f4f]
+	(No symbol) [0x7ff65ed27678]
+	(No symbol) [0x7ff65ed1af68]
+	(No symbol) [0x7ff65e97e62e]
+	(No symbol) [0x7ff65e7716f3]
+	(No symbol) [0x7ff65e76c304]
+	(No symbol) [0x7ff65e76c494]
+	(No symbol) [0x7ff65e75509c]
+	(No symbol) [0x7ffb8d137374]
+	(No symbol) [0x7ffb8e39cc91]
+
+2026-11-24 09:39:52,989 INFO talento_tech - Inicializando la prueba de Inventario
+2026-11-24 09:39:52,989 INFO talento_tech - Ingresando a la pagina web
+2026-11-24 09:39:53,340 INFO talento_tech - Ingresando credenciales para iniciar sesion
+2026-11-24 09:39:53,499 INFO talento_tech - Sesion iniciada correctamente
+2026-11-24 09:39:53,546 INFO talento_tech - Productos de la pagina web capturados
+2026-11-24 09:39:53,546 INFO talento_tech - Prueba de cantidad de productos validada
+2026-11-24 09:39:53,587 INFO talento_tech - Prueba de integradad de la informacion de los productos validada
+2026-11-24 09:39:53,602 INFO talento_tech - Prueba de visibilidad del menu en la pagina validada
+2026-11-24 09:39:53,612 INFO talento_tech - Prueba de visibilidad del filtro en la pagina validada
+2026-11-24 09:39:56,729 INFO talento_tech - Iniciando prueba de login
+2026-11-24 09:39:57,011 INFO talento_tech - Pagina Abierta.
+2026-11-24 09:39:57,173 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-24 09:39:57,213 INFO talento_tech - Login exitoso
+2026-11-24 09:40:00,299 INFO talento_tech - Iniciando prueba de login
+2026-11-24 09:40:00,606 INFO talento_tech - Pagina Abierta.
+2026-11-24 09:40:00,782 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-24 09:40:00,803 INFO talento_tech - Prueba de mensaje de error valida
+2026-11-24 09:40:03,937 INFO talento_tech - Iniciando prueba de login
+2026-11-24 09:40:04,269 INFO talento_tech - Pagina Abierta.
+2026-11-24 09:40:04,417 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-24 09:40:04,440 INFO talento_tech - Prueba de mensaje de error valida

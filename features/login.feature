@@ -19,7 +19,7 @@ Feature: Inicio de sesion
 
         Examples:
             |usuario|password|mensaje|
-            |standard_user|1234|Epic sadface: Username and password do not match any user in this service|
+            |standard_user|4455|Epic sadface: Username and password do not match any user in this service|
             |standart_user|secret_sauce|Epic sadface: Username and password do not match any user in this service|
             |VACIO|secret_sauce|Epic sadface: Username is required|
             |standard_user|VACIO|Epic sadface: Password is required|

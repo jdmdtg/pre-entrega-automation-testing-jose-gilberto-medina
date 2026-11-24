@@ -1,0 +1,40 @@
+2026-11-23 20:55:12,518 ERROR talento_tech - Error durante la prueba de Inventario.
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_api.py", line 93, in test_eliminar_usuario
+    assert response.elapsed.total_seconds() < 2
+AssertionError: assert 21.783504 < 2
+ +  where 21.783504 = <built-in method total_seconds of datetime.timedelta object at 0x0000016FEE81FD80>()
+ +    where <built-in method total_seconds of datetime.timedelta object at 0x0000016FEE81FD80> = datetime.timedelta(seconds=21, microseconds=783504).total_seconds
+ +      where datetime.timedelta(seconds=21, microseconds=783504) = <Response [204]>.elapsed
+2026-11-23 20:55:14,972 INFO talento_tech - Inicializando la prueba de carrito
+2026-11-23 20:55:14,972 INFO talento_tech - Ingresando a la pagina web de prueba
+2026-11-23 20:55:16,299 INFO talento_tech - Iniciando sesion con credenciales validas
+2026-11-23 20:55:16,543 INFO talento_tech - Sesion iniciada correctamente
+2026-11-23 20:55:16,543 INFO talento_tech - Ingresando a la pagina de inventario
+2026-11-23 20:55:16,543 INFO talento_tech - Leyendo el primer producto del JSON
+2026-11-23 20:55:16,543 INFO talento_tech - Agregando producto del JSON al carrito
+2026-11-23 20:55:16,725 INFO talento_tech - Prueba de contador de carrito validad
+2026-11-23 20:55:16,725 INFO talento_tech - Ir a la pagina del carrito
+2026-11-23 20:55:16,799 INFO talento_tech - Prueba del nombre del producto en carrito contra JSON validada
+2026-11-23 20:55:16,815 INFO talento_tech - Prueba del precio del producto en carrito contra JSON validada
+2026-11-23 20:55:20,427 INFO talento_tech - Inicializando la prueba de Inventario
+2026-11-23 20:55:20,427 INFO talento_tech - Ingresando a la pagina web
+2026-11-23 20:55:20,754 INFO talento_tech - Ingresando credenciales para iniciar sesion
+2026-11-23 20:55:20,921 INFO talento_tech - Sesion iniciada correctamente
+2026-11-23 20:55:20,995 INFO talento_tech - Productos de la pagina web capturados
+2026-11-23 20:55:20,995 INFO talento_tech - Prueba de cantidad de productos validada
+2026-11-23 20:55:21,035 INFO talento_tech - Prueba de integradad de la informacion de los productos validada
+2026-11-23 20:55:21,048 INFO talento_tech - Prueba de visibilidad del menu en la pagina validada
+2026-11-23 20:55:21,059 INFO talento_tech - Prueba de visibilidad del filtro en la pagina validada
+2026-11-23 20:55:24,669 INFO talento_tech - Iniciando prueba de login
+2026-11-23 20:55:24,953 INFO talento_tech - Pagina Abierta.
+2026-11-23 20:55:25,140 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 20:55:25,184 INFO talento_tech - Login exitoso
+2026-11-23 20:55:28,345 INFO talento_tech - Iniciando prueba de login
+2026-11-23 20:55:28,626 INFO talento_tech - Pagina Abierta.
+2026-11-23 20:55:28,776 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 20:55:28,798 INFO talento_tech - Prueba de mensaje de error valida
+2026-11-23 20:55:31,888 INFO talento_tech - Iniciando prueba de login
+2026-11-23 20:55:32,181 INFO talento_tech - Pagina Abierta.
+2026-11-23 20:55:32,336 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 20:55:32,359 INFO talento_tech - Prueba de mensaje de error valida

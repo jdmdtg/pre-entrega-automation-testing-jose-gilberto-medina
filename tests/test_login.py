@@ -24,7 +24,7 @@ def test_login(driver,data):
             error = login_page.obtener_mensaje_error()
             assert "Epic sad" in error
             assert "Epic sadface" in error
-            logger.info("Prueba de mensaje de error valida")
+            logger.info("Prueba de mensaje de error valida")          
     except Exception:
         logger.exception("Error durante la prueba de login")
         raise

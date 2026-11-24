@@ -1,0 +1,48 @@
+2026-11-23 20:48:26,723 ERROR talento_tech - Error durante la prueba de Inventario.
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_api.py", line 72, in test_crear_usuario
+    assert response.elapsed.total_seconds() < 5
+AssertionError: assert 21.85067 < 5
+ +  where 21.85067 = <built-in method total_seconds of datetime.timedelta object at 0x000001CD25E1FD20>()
+ +    where <built-in method total_seconds of datetime.timedelta object at 0x000001CD25E1FD20> = datetime.timedelta(seconds=21, microseconds=850670).total_seconds
+ +      where datetime.timedelta(seconds=21, microseconds=850670) = <Response [201]>.elapsed
+2026-11-23 20:48:30,489 ERROR talento_tech - Error durante la prueba de Inventario.
+Traceback (most recent call last):
+  File "C:\Users\JMEDINA\Documents\Proyectos\Python\final-entrega-qa-a-tests\tests\test_api.py", line 93, in test_eliminar_usuario
+    assert response.elapsed.total_seconds() < 2
+AssertionError: assert 3.5388 < 2
+ +  where 3.5388 = <built-in method total_seconds of datetime.timedelta object at 0x000001CD25E1F120>()
+ +    where <built-in method total_seconds of datetime.timedelta object at 0x000001CD25E1F120> = datetime.timedelta(seconds=3, microseconds=538800).total_seconds
+ +      where datetime.timedelta(seconds=3, microseconds=538800) = <Response [204]>.elapsed
+2026-11-23 20:48:32,707 INFO talento_tech - Inicializando la prueba de carrito
+2026-11-23 20:48:32,707 INFO talento_tech - Ingresando a la pagina web de prueba
+2026-11-23 20:48:34,935 INFO talento_tech - Iniciando sesion con credenciales validas
+2026-11-23 20:48:35,105 INFO talento_tech - Sesion iniciada correctamente
+2026-11-23 20:48:35,105 INFO talento_tech - Ingresando a la pagina de inventario
+2026-11-23 20:48:35,105 INFO talento_tech - Leyendo el primer producto del JSON
+2026-11-23 20:48:35,106 INFO talento_tech - Agregando producto del JSON al carrito
+2026-11-23 20:48:35,269 INFO talento_tech - Prueba de contador de carrito validad
+2026-11-23 20:48:35,269 INFO talento_tech - Ir a la pagina del carrito
+2026-11-23 20:48:35,334 INFO talento_tech - Prueba del nombre del producto en carrito contra JSON validada
+2026-11-23 20:48:35,348 INFO talento_tech - Prueba del precio del producto en carrito contra JSON validada
+2026-11-23 20:48:38,540 INFO talento_tech - Inicializando la prueba de Inventario
+2026-11-23 20:48:38,540 INFO talento_tech - Ingresando a la pagina web
+2026-11-23 20:48:40,765 INFO talento_tech - Ingresando credenciales para iniciar sesion
+2026-11-23 20:48:40,923 INFO talento_tech - Sesion iniciada correctamente
+2026-11-23 20:48:40,973 INFO talento_tech - Productos de la pagina web capturados
+2026-11-23 20:48:40,973 INFO talento_tech - Prueba de cantidad de productos validada
+2026-11-23 20:48:41,010 INFO talento_tech - Prueba de integradad de la informacion de los productos validada
+2026-11-23 20:48:41,024 INFO talento_tech - Prueba de visibilidad del menu en la pagina validada
+2026-11-23 20:48:41,034 INFO talento_tech - Prueba de visibilidad del filtro en la pagina validada
+2026-11-23 20:48:44,222 INFO talento_tech - Iniciando prueba de login
+2026-11-23 20:48:44,489 INFO talento_tech - Pagina Abierta.
+2026-11-23 20:48:44,659 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 20:48:44,698 INFO talento_tech - Login exitoso
+2026-11-23 20:48:47,793 INFO talento_tech - Iniciando prueba de login
+2026-11-23 20:48:48,054 INFO talento_tech - Pagina Abierta.
+2026-11-23 20:48:48,210 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 20:48:48,232 INFO talento_tech - Prueba de mensaje de error valida
+2026-11-23 20:48:51,339 INFO talento_tech - Iniciando prueba de login
+2026-11-23 20:48:51,645 INFO talento_tech - Pagina Abierta.
+2026-11-23 20:48:51,842 INFO talento_tech - Ingreso de credenciales sin problemas
+2026-11-23 20:48:51,867 INFO talento_tech - Prueba de mensaje de error valida

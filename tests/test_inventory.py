@@ -23,7 +23,7 @@ def test_inventory(driver):
         
         assert inventory_page.obtener_nombre_primer_producto() == "Sauce Labs Backpack"
         assert inventory_page.obtener_precio_primer_producto() == "$29.99"
-        # assert inventory_page.obtener_descripcion_primer_producto() == "Cualquier cosa 1"
+   
         logger.info("Prueba de integradad de la informacion de los productos validada")
         
         assert inventory_page.menu_visible()

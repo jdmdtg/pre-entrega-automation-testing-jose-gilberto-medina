@@ -14,7 +14,6 @@ def driver():
 
     driver.implicitly_wait(10)
 
-
     yield driver
 
     driver.quit()
@@ -29,19 +28,21 @@ def headers():
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item,call):
-    outcome = yield
-    report = outcome.get_result()
+    outcome = yield #Generamos una espera para que el framework trabaje.
+    report = outcome.get_result() # obtenemos el obj-
 
     if report.when == "call" and report.failed:
         driver = item.funcargs.get("driver")
 
         carpeta = pathlib.Path("reports/screenshots")
         carpeta.mkdir(parents=True,exist_ok=True)
-        archivo = carpeta / f"{item.name}.png"
-        if driver is not None:
+        
+        if driver:
+            #Capturamos
+            archivo = carpeta / f"{item.name}.png"        
             driver.save_screenshot(str(archivo))
 
             imagen = base64.b64encode(archivo.read_bytes()).decode("utf-8")
             report.extras = [
             pytest_html.extras.png(imagen, name="Screenshot")
-        ]
+            ]
