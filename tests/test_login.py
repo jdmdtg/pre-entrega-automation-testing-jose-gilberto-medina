@@ -3,10 +3,16 @@ import pytest
 from utils.reader import read_login_csv
 from utils.logger import logger
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+
 @pytest.mark.flaky(reruns=2,reruns_delay=5)
 @pytest.mark.parametrize(
         "data",read_login_csv())
 def test_login(driver,data):
+     # Crear el driver (Chrome por defecto)
+    driver = webdriver.Chrome()
     try:
         logger.info("Iniciando prueba de login")
         login_page = LoginPage(driver)

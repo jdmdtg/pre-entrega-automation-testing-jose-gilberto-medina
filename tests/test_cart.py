@@ -8,6 +8,8 @@ from utils.reader import read_productos_json
 from utils.logger import logger
 
 def test_cart(driver):
+     # Crear el driver (Chrome por defecto)
+    driver = webdriver.Chrome()
     try:
         logger.info("Inicializando la prueba de carrito")
         login_page = LoginPage(driver)

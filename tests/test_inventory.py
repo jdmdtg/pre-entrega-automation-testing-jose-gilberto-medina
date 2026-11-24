@@ -1,8 +1,12 @@
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from utils.logger import logger
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 def test_inventory(driver):
+     # Crear el driver (Chrome por defecto)
+    driver = webdriver.Chrome()
     try:
         logger.info("Inicializando la prueba de Inventario")
         login_page = LoginPage(driver)
