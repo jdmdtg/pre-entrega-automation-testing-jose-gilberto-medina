@@ -1,4 +1,4 @@
-# Pre-entrega - Automatización de Testing
+# Entrega Final - Automatización de Testing
 
 Este proyecto implementa una automatización de pruebas para el sitio **SauceDemo**, utilizando **Selenium WebDriver** y **Python**.
 
@@ -45,6 +45,9 @@ pre-entrega-qa-a-tests
    * pip install selenium.
    * pip install pytest-html.
    * python -m venv venv.
+   * pip install pytest-check
+   * pip install pythes_html
+   * pip install pytest-rerunfailures
    
 
 **Descarga el WebDriver correspondiente a tu navegador:**
@@ -57,29 +60,35 @@ ChromeDriver
 pip show selenium
 
 ▶️ Ejecución de las Pruebas:
-- Para ejecutar todas las pruebas en un solo proceso escribe: pytest.(Verificar que la ruta este correcta para evitar errores.)
-- Para ejecutar archivo por archivo, escribe pytest seguido el nombre del arhivo.py.
+- Para ejecutar todas las pruebas en un solo proceso escribe: pytest tests/ .(Verificar que la ruta este correcta para evitar errores.)
+- Para ejecutar archivo por archivo, escribe pytest tests/ seguido el nombre del arhivo.py.
 
 
 ✅ Funcionalidades Implementadas
 
 1. Automatización de Login
    Caso de éxito con credenciales válidas.
+   Dos casos fallidos con credenciales invalidos.
 
-2. Verificación del Catálogo
+3. Verificación del Catálogo
    Comprobación del título de la página.
 
-3. Verificación de presencia de productos.
+4. Verificación de presencia de productos.
 
-4. Validación de elementos de la interfaz.
+5. Validación de elementos de la interfaz.
 
-5. Navegar al carrito.
+6. Navegar al carrito.
 
-6. Interacción con el Carrito.
+7. Interacción con el Carrito.
    Añadir producto al carrito.
 
-7. Comprobar que el producto añadido aparezca correctamente.
+8. Comprobar que el producto añadido aparezca correctamente.
 
+9. Automatización de Pruebas API Publica Nombre de la API: https://reqres.in/api
+    - Uso del método GET para obtener usuario.
+    - Uso del metodos POTS, para crear un usuario.  
+    - Uso del método DELETE, para eliminar un usuario de la API.
+    
 
 👤 Autor
 José Gilberto Medina
