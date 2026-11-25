@@ -24,6 +24,7 @@ El objetivo es automatizar los siguientes flujos en la Página SauceDemo:
 - **Pytest**: Framework de testing para estructurar y ejecutar pruebas.
 - **Selenium WebDriver**: Para la automatización de la interfaz web.
 - **Git/GitHub**: Para control de versiones y compartir el código.
+- **requests**: Para el manejo de API.
 
 ## 📁 Estructura del Proyecto
 
@@ -100,6 +101,15 @@ pip show selenium
 - Para ejecutar todas las pruebas en un solo proceso escribe: pytest tests/ .(Verificar que la ruta este correcta para evitar errores.)
 - Para ejecutar archivo por archivo, escribe pytest tests/ seguido el nombre del arhivo.py.
 
+***¿Cómo ejecutar las pruebas?**
+
+- Para todas las pruebas simultaneas, En la consola Escribir: pytest tests\ -v
+- Para las pruebas individuales: En la consola escribir: 
+	pytest tests\test_login.py 
+	pytest tests\test_apy.py
+	pytest tests\test_cart.py
+	pytest tests\test_inventory.py
+
 
 ✅ Funcionalidades Implementadas
 
@@ -126,6 +136,16 @@ pip show selenium
     - Uso del metodos POTS, para crear un usuario.  
     - Uso del método DELETE, para eliminar un usuario de la API.
     
+*** ¿Cómo analizar los reportes de las pruebas?**
+
+- Resumen General (Summary):
+
+*Conteo de estados:* Verifica la proporción entre pruebas aprobadas (Passed), fallidas (Failed).
+
+*Tiempo de ejecución:* Revisa la duración total de la suite para detectar cuellos de botella o esperas innecesarias en las pruebas de UI o API.
+
+*Capturas:* Inspecciona la captura de pantalla adjunta en el detalle del test fallido para confirmar visualmente si el error se debió a un cambio en la interfaz, un mensaje de error inesperado o un problema de carga.
+
 
 👤 Autor
 José Gilberto Medina
