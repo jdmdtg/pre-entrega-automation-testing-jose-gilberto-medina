@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-qa-a-tests\venv"
+VIRTUAL_ENV="C:\Users\JMEDINA\Documents\Proyectos\Python\pre-entrega-automation-testing-jose-gilberto-medina\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

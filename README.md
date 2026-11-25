@@ -83,6 +83,8 @@ pre-entrega-qa-a-tests
    * pip install pytest-check
    * pip install pythes_html
    * pip install pytest-rerunfailures
+   * pip install requests
+   * pip install fake
    
 
 **Descarga el WebDriver correspondiente a tu navegador:**
