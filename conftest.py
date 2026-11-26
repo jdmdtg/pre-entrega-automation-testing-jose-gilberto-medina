@@ -1,9 +1,11 @@
 import pytest
 from selenium import webdriver
 
+
 import pytest_html
 import pathlib
 import base64
+
 
 @pytest.fixture
 def driver():
