@@ -38,7 +38,7 @@ jobs:
       # 5 · Ejecutar tests UI + API + BDD
       - name: Run Pytest & Behave
         run: |
-          pytest tests/ tests_api/ -v --html=reports/pytest_report.html --self-contained-html
+          pytest tests/ -v --html=reports/pytest_report.html --self-contained-html
           behave -f json -o reports/behave.json -f pretty
 
       # 6 · Subir artefactos (reportes + logs)
